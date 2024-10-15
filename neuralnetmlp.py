@@ -3,6 +3,7 @@ import sys
 
 class NeuralNetMLP():
     """
+    ここでは隠れ層が1つだけある multi layer perceptron を構成する
     parameters
     n_hidden : int
         default 30
@@ -119,9 +120,18 @@ class NeuralNetMLP():
         self
         """
 
+        # 出力の次元
         n_output = np.unique(y_train).shape[0]
+        # 入力の次元
         n_features = X_train.shape[1]
-        
+        """
+        入力と出力の形式はデータの形によって決まるので、
+        適合するタイミングで与えるデータによって決める。
+        一方、ニューラルネットワークのハイパーパラメータである隠れ層のユニット数などは
+        インスタンス作成時の初期化で設定する。
+        """
+
+
         # weight initialize
 
         # input layer -> hidden layer
