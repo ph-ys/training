@@ -12,3 +12,4 @@ htmlcov/
 
 # data
 movie_data.csv
+data/
